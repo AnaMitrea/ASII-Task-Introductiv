@@ -1,0 +1,210 @@
+body{
+	margin: 0;
+	padding: 0;
+	font-family: 'Source Sans Pro', sans-serif;
+	background:  #ffffff;	
+	overflow: hidden;
+}
+.box{
+    width:35%;
+    height: 100%;
+    overflow: hidden;
+    background: #cc5656;
+    background-position: left;
+    position: absolute;
+    background-size: 100%;
+    color: #FFFFFF;
+    box-shadow: 0 1px 60px 0 black;
+    animation: move 7s infinite;
+}
+	@keyframes move {
+		 0%   {background-color: #cc5656;}
+		 25%  {background-color: #B63737;}
+		50%  {background-color: #7B2525;}
+		 75%  {background-color: #B63737;}
+  100% {background-color: #cc5656;}
+		
+	}	
+
+.box h1{
+	padding: 30% 10% 0px;
+	font-size: 300%;
+	color: white;
+	text-transform: uppercase;
+	font-weight: 200;
+	text-align: center;
+	animation: text-shadow 1.5s ease-in-out infinite;
+	
+}
+.box input[type="text"], .box input[type="password"]{
+	background: white;
+	display: block;
+	margin: 20px  auto;
+	text-align: center;
+	border: 2px solid #ffffff;
+	padding: 14px 10px;
+	width: 200px;
+	outline: none;
+	color: black ;
+	border-radius: 25px;
+	transition: 0.25s;
+	
+}
+.box h1:hover {
+    animation-play-state: paused;
+}
+
+@keyframes text-shadow {
+     0% {  
+        transform: translateY(0);
+    }
+
+    20% {  
+        transform: translateY(-0.2em);
+    }
+	
+    40% {  
+        transform: translateY(0.2em);
+      
+    }
+    
+    60% {
+        transform: translateY(-0.03em);
+    }
+
+    80% {  
+        transform: translateY(0);
+    
+    }
+}
+.box input[type="text"]:focus, .box input[type="password"]:focus{
+	width: 280px;
+	border-color: none;
+	color: black;
+	box-shadow: 0 1px 30px 0 rgba(0,0,0,.56);
+}
+.box input[type="submit"]{
+	background: none;
+	display: block;
+	margin: 20px auto;
+	text-align: center;
+	border: 2px solid #ffffff;
+	padding: 14px 40px;
+	outline: none;
+	color: white;
+	border-radius: 25px;
+	transition: 0.25s;
+	cursor: pointer;
+}
+.buton{
+	  background: white;
+	display: block;
+	margin: 20px auto;
+	text-align: center;
+	border: 2px solid #ffffff;
+	padding: 0px 10px 14px;
+	width: 150px;
+	outline: none;
+	border-radius: 25px;
+	transition: 0.25s;
+	cursor: pointer;
+}
+.buton a{
+	text-decoration: none;
+	display: inline;
+	text-align: center;
+	color: dimgray;
+}
+.buton a:hover{
+	color: white;
+}
+.box input[type="submit"]:hover{
+	background: darkred;
+	color: white;
+	border: solid darkred;
+	box-shadow: 0 1px 30px 0 white;
+}
+.buton:hover {
+	background: dimgray;
+	color: white;
+	border: 2px solid dimgray;
+	box-shadow: 0 1px 30px 0 rgba(0,0,0,.56);
+	text-decoration: none;
+}
+
+.toggle {
+    position: relative;
+    display: block;
+    width: 40px;
+    height: 20px;
+    cursor: pointer;
+    -webkit-tap-highlight-color: transparent;
+    transform: translate3d(0, 0, 0);
+    margin-top: -19.5px;
+    margin-right: 114px;
+    margin-left: 57%;
+    margin-bottom: 53px;
+}
+.toggle:before {
+  content: "";
+  position: relative;
+  top: 3px;
+  left: 3px;
+  width: 34px;
+  height: 14px;
+  display: block;
+  background: #9A9999;
+  border-radius: 8px;
+  transition: background 0.2s ease;
+}
+.toggle span {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 20px;
+  height: 20px;
+  display: block;
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 3px 8px rgba(154, 153, 153, 0.5);
+  transition: all 0.2s ease;
+}
+.toggle span:before {
+  content: "";
+  position: absolute;
+  display: block;
+  margin: -10px;
+  width: 56px;
+  height: 56px;
+  background: white;
+  border-radius: 50%;
+  transform: scale(0);
+  opacity: 1;
+  pointer-events: none;
+}
+
+#cbx:checked + .toggle:before {
+  background: #F89696;
+}
+#cbx:checked + .toggle span {
+  background: #8E0000;
+  transform: translateX(20px);
+  transition: all 0.2s cubic-bezier(0.8, 0.4, 0.3, 1.25), background 0.15s ease;
+  box-shadow: 0 3px 8px rgba(220,45,45,0.20);
+}
+#cbx:checked + .toggle span:before {
+  transform: scale(1);
+  opacity: 0;
+  transition: all 0.4s ease;
+}
+
+.center {
+  position: absolute;
+  top: calc(50% - 10px);
+  left: calc(50% - 20px);
+}
+a{
+    position: sticky;
+    margin-left: 35%;
+	
+}
